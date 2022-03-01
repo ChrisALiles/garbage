@@ -8,9 +8,9 @@ import (
 
 // The mutator does some memory manipulation -
 // 1) Remove a node from the free list and attach it to active memory
-// 2) Produce grabage by detaching a mode from active memory
+// 2) Produce garbage by detaching a mode from active memory
 // and also tries to mimic actual work by repeated passes through
-// ctive memory.
+// active memory.
 func mutator(runTime int, colTimeOut chan bool) {
 	timeout := time.After(time.Duration(runTime * int(time.Second)))
 	for {
